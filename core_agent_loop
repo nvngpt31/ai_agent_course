@@ -1,0 +1,38 @@
+The core agent loop (also known as the agentic loop) is the iterative architecture that allows an AI to move beyond simple "one-shot" text generation to performing multi-step tasks autonomously. 
+
+At its most basic level, it can be represented by a simple while loop:  
+
+while task_not_complete:
+    # 1. PERCEIVE: Get input (user message, previous tool output, or error)
+    # 2. REASON: LLM decides what to do next based on the task and context
+    # 3. ACT: Execute a tool call (API request, file edit, search, etc.)
+    # 4. OBSERVE: Examine the result of the action
+    # 5. REPEAT: Feed result back into context and start again
+
+Key Stages of the Loop
+Modern agent architectures, such as those used by or typically follow these specific stages: 
+
+Perceive: The agent gathers information from its environment, including user prompts, existing code, or API responses.
+
+Reason/Think: The LLM processes the gathered context to derive intent and determine the most logical next step.
+
+Plan: For complex objectives, the agent breaks the task into smaller sub-tasks before proceeding.
+
+Act: The agent performs a specific action using Tools (e.g., searching a database, running a terminal command, or writing code).
+
+Observe/Validate: The agent reviews the outcome of its action (e.g., checking if a test passed or a file was updated) to see if it worked as intended.
+
+Evaluate/Decision: Based on the observation, the agent decides whether to continue iterating or stop because the goal is met. 
+
+Core Components
+An agent requires three primary pieces of "infrastructure" to run this loop effectively:  
+
+Reasoning Engine (The "Brain"): Typically an advanced LLM that can handle complex instructions and tool selection.
+Tools (The "Hands"): External APIs, functions, or databases that allow the agent to interact with the world.
+Memory (The "Context"): Keeps track of conversation history and previous actions so the agent can learn from its own loop. 
+
+Why the Loop Matters: 
+
+Unlike a standard chatbot that provides a single answer, an agent in a loop can self-correct. If a command fails or code has a bug, the "Observe" stage catches the error, and the "Reason" stage plans a fix in the next iteration. This systematic iteration is the backbone of autonomous software like Devin AI and Claude Code. 
+
+
