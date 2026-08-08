@@ -1,2 +1,4 @@
 file1
 testing unstaged
+test diff --staged
+checking test diff
