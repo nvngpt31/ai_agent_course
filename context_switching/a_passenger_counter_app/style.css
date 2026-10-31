@@ -1,0 +1,73 @@
+This file centers the application window on the screen and provides a clean, card-like design with clear, highly visible action buttons.
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebe1 0%, #d4a5ec 100%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+#count-el {
+    font-size: 4rem;
+    margin: 20px 0;
+    color: #222;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#increment-btn {
+    background-color: #00b4d8;
+}
+
+#increment-btn:hover {
+    background-color: #0096c7;
+}
+
+#save-btn {
+    background-color: #2a9d8f;
+}
+
+#save-btn:hover {
+    background-color: #264653;
+}
+
+#save-el {
+    font-weight: bold;
+    color: #555;
+    margin-top: 25px;
+}
